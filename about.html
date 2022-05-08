@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pin Apartments</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Finder - Directory &amp; Listings Bootstrap Template">
+    <meta name="keywords"
+        content="bootstrap, business, directory, listings, e-commerce, car dealer, city guide, real estate, job board, user account, multipurpose, ui kit, html5, css3, javascript, gallery, slider, touch">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #666276;
+            ;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #bbb7c5;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/nouislider/dist/nouislider.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+    <!----Nav Bar----->
+    <!-- Light navbar: Dark links against light background -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand me-2 me-xl-4">
+                <img class="d-block" src="img/logo/pina.png" width="50" alt="Finder">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <a href="#" class="btn btn-primary btn-sm ms-2 order-lg-3">
+                <i class="fi-phone me-2"></i>+355 69 202 1433<span class='d-none d-sm-inline'></span>
+            </a>
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Apartments</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="lucas.html" class="dropdown-item">Lucas</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li>
+                                <a href="mimosa.html" class="dropdown-item">Mimosa</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!------End Nav Bar----->
+
+
+    <main>
+
+
+        <!-- Background image parallax -->
+        <div class="jarallax bg-dark py-5 mb-5" data-jarallax data-speed="0.5">
+            <span class="img-overlay"></span>
+            <div class="jarallax-img" style="background-image: url(path-to-background-image);"></div>
+            <div class="container content-overlay text-center my-md-4 py-sm-5">
+                <h2 class="h1 text-light py-lg-5 my-5">Pin Apartments, Tirana</h2>
+            </div>
+        </div>
+
+        <!-- about details -->
+        <div class="container">
+            <h3>Hosted by Gent</h3>
+
+            <p>My Apartments Is an Aparthotel, with different spaces, we offer for our guests: Apartments and Rooms. in
+                a new build,
+                At
+                center of Tirana. Equipment apartments bedroom and living room, and kitchen, also we have different
+                bedrooms with
+                toilet
+                and with or without balcony, perfect for couples with 2 children or four adults, or single persons, With
+                central
+                square
+                and city view only 180 m way, Pets are not allowed, party no allowed. Flat screen Tv strong Wi-Fi
+                signal. Parking on
+                the
+                site. These apartments are located in the center of Tirana, 3 min walk away from the Scanderbeg square
+                and from the
+                main
+                touristic attractions of the city. The apartments and the rooms are fully furnished and finished on
+                September 2021.
+                It
+                is the perfect place for you if you are coming to the city for work or for leisure. WE ALSO OFFER CAR
+                FOR RENT...
+            </p>
+
+            <p>I am Genti. I live in Tirana. I am Civil engineer. I love this city and I love meeting guests from
+                different parts of
+                the world :-) During my travel, both privately and on duty, I have learned the importance of safe, clean
+                and comfortable
+                accommodation in a central location with good infrastructure. This is what I offer you with my
+                apartments. All my
+                apartments are located in the same building, and near ´s biggest tourist attraction in Tirana. My city
+                center apartments
+                are located only 180 m way from Scanderbeg square. As my apartments are located in the same building it
+                is very
+                convenient for groups as well to stay with me. My offer spans apartments of 45m2 to 55m2 with a
+                corridor, a living room
+                with kitchen inside, 1 bedroom and one toilet with a capacity of sleeping up to 4 persons per apartment.
+            </p>
+
+            <p>the neighborhood is vibrant and every shop or service is at a walk-able distance. many landmarks and
+                attractions are
+                easily accessible. At the Scanderbeg square. Within 180 m from the apartments, you can visit the Opera
+                House, the
+                National Theatre, the National Historic Museum, the Museum of the National Bank of Albania, The House of
+                Leaves Museum,
+                Bunk Art 2 and a lot of other attractions. Shopping streets can be found at Rruga Myslym Shyri 300 m
+                away. A lot of
+                markets and restaurant are near the building, Tirana Airport is at a distance of 17 km and shuttle
+                service can be
+                organized upon request. if nightlife is your strong point, then ''Blloku'', the nightlife center of
+                Tirana, is the right
+                place to visit, and even on foot as it near the apartment. moreover, the location is great because you
+                are at a short
+                distance from many business centers and important institutions. s safety and security is not a matter to
+                be discussed as
+                the whole center of Tirana is a great place in regards to those two parameters and that's why many
+                foreigners choose to
+                live in this neighborhood. feel free to ask if you have any questions!</p>
+
+            <p>Languages spoken: <b>English</b> , Italian</p>
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer-->
+    <footer class="footer bg-secondary pt-5">
+        <div class="container pt-lg-4 pb-4">
+            <!-- Links-->
+            <div class="row mb-5 pb-md-3 pb-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 mb-lg-0 mb-4">
+                    <h3>PIN Apartments</h3>
+
+                    <p>A place where you home. If you're thinking of visiting a busy city, focus your search on hotels
+                        that are centrally located, so you can move
+                        around freely and easily - many sights and attractions will be close to your hotel, or just a
+                        short taxi ride away.</p>
+
+
+                </div>
+
+                <div class="col-lg-4 mb-lg-0 mb-4">
+                    <div class="d-flex flex-sm-row flex-column justify-content-between mx-n2">
+                        <div class="mb-sm-0 mb-4 px-2">
+                            <a class="d-inline-block mb-4" href="real-estate-home.html" style="text-decoration:none">
+                                <h3>Contact Us</h3>
+
+                            </a>
+                            <ul class="nav flex-column mb-sm-4 mb-2">
+                                <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal"
+                                        href="mailto:example@email.com"><i
+                                            class="fi-mail mt-n1 me-2 align-middle opacity-70"></i>example@email.com</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="tel:4065550120"><i
+                                            class="fi-phone mt-n1 me-2 align-middle opacity-70"></i>+355 69 202 1433</a>
+                                </li>
+                            </ul>
+                            <div class="pt-2"><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-home"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-airbnb"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-whatsapp"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-phone"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
+            class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fi-chevron-up">
+        </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/nouislider/dist/nouislider.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+</body>
+
+</html>

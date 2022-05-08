@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Finder | Real Estate | Property for Rent</title>
+  <!-- SEO Meta Tags-->
+  <meta name="description" content="Finder - Directory &amp; Listings Bootstrap Template">
+  <meta name="keywords"
+    content="bootstrap, business, directory, listings, e-commerce, car dealer, city guide, real estate, job board, user account, multipurpose, ui kit, html5, css3, javascript, gallery, slider, touch">
+  <meta name="author" content="Createx Studio">
+  <!-- Viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon and Touch Icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#766df4">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Page loading styles-->
+  <style>
+    .page-loading {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all .4s .2s ease-in-out;
+      transition: all .4s .2s ease-in-out;
+      background-color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9999;
+    }
+
+    .page-loading.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .page-loading-inner {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      -webkit-transition: opacity .2s ease-in-out;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+
+    .page-loading.active>.page-loading-inner {
+      opacity: 1;
+    }
+
+    .page-loading-inner>span {
+      display: block;
+      font-size: 1rem;
+      font-weight: normal;
+      color: #666276;
+      ;
+    }
+
+    .page-spinner {
+      display: inline-block;
+      width: 2.75rem;
+      height: 2.75rem;
+      margin-bottom: .75rem;
+      vertical-align: text-bottom;
+      border: .15em solid #bbb7c5;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner .75s linear infinite;
+      animation: spinner .75s linear infinite;
+    }
+
+    @-webkit-keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinner {
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <!-- Page loading scripts-->
+  <script>
+    (function () {
+      window.onload = function () {
+        var preloader = document.querySelector('.page-loading');
+        preloader.classList.remove('active');
+        setTimeout(function () {
+          preloader.remove();
+        }, 2000);
+      };
+    })();
+
+  </script>
+  <!-- Vendor Styles-->
+  <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+  <link rel="stylesheet" media="screen" href="vendor/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+  <link rel="stylesheet" media="screen" href="vendor/nouislider/dist/nouislider.min.css" />
+  <!-- Main Theme Styles + Bootstrap-->
+  <link rel="stylesheet" media="screen" href="css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body class="fixed-bottom-btn">
+  <!-- Page loading spinner-->
+  <div class="page-loading active">
+    <div class="page-loading-inner">
+      <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+  </div>
+  <main class="page-wrapper">
+
+    <header>
+      <div class="p-3 d-flex">
+        <div>
+
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="img/logo/pina.png" style="width:50px" alt=""> PIN Apartments
+          </a>
+
+        </div>
+        <div class="ms-auto my-2">+587-457698</div>
+      </div>
+    </header>
+
+    <!-- Page content-->
+    <!-- Page container-->
+    <div class="container-fluid p-0">
+      <div class="row g-0 mt-n3">
+        <!-- Filters sidebar (Offcanvas on mobile)-->
+        <aside class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
+          <div class="offcanvas offcanvas-start offcanvas-collapse" id="filters-sidebar">
+            <div class="offcanvas-header d-flex d-lg-none align-items-center">
+              <h2 class="h5 mb-0">Filters</h2>
+              <button class="btn-close" type="button" data-bs-dismiss="offcanvas"></button>
+            </div>
+
+
+          </div>
+        </aside>
+        <!-- Page content-->
+        <div class="col-lg-8 col-xl-9 position-relative overflow-hidden pb-5 pt-4 px-3 px-xl-4 px-xxl-5">
+
+
+          <!-- Title-->
+          <div class="d-sm-flex align-items-center justify-content-between pb-3 pb-sm-4">
+            <h1 class="h2 mb-sm-0">Property for rent</h1>
+          </div>
+
+          <!-- Catalog grid-->
+          <div class="row g-4 py-4">
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-success mb-1">Verified</span><span
+                      class="d-table badge bg-info">New</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/06.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/06.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">3-bed
+                      Apartment | 67 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">3811 Ditmars Blvd Astoria, NY 11105</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$1,650</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">3<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span class="d-table badge bg-info">New</span>
+                  </div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/07.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/07.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Pine
+                      Apartments | 56 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">3811 Ditmars Blvd Astoria, NY 11105</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$2,000</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">4<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span class="d-table badge bg-info">New</span>
+                  </div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/08.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/08.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Greenpoint
+                      Rentals | 85 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">1510 Castle Hill Ave Bronx, NY 10462</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$1,350</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">0<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-success">Verified</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/09.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/09.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Terra
+                      Nova Apartments | 85 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">21 India St Brooklyn, NY 11222</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$2,400</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">5<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-success mb-1">Verified</span><span
+                      class="d-table badge bg-danger">Featured</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/10.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/10.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">O’Farrell
+                      Rooms
+                      | 40 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">460 E Fordham Rd Bronx, NY 10458</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>From $550</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">0<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span class="d-table badge bg-info">New</span>
+                  </div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/11.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/11.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Studio |
+                      32 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">140-60 Beech Ave Flushing, NY 11355</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$680</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-danger">Featured</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/12.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/12.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Mason
+                      House | 150 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">557 Grand Concourse Bronx, NY 10451</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>From $4,000</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">3<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-success">Verified</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/13.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/13.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Office |
+                      320 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">159 20th Street Brooklyn, NY 11232</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$8,000</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">8<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/15.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/15.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Lakewood
+                      Rentals | 90 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">5 Brewster Street Glen Cove, NY 11542</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$1,200</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">8<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/14.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/14.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Crystal
+                      Apartment| 60 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">495 Henry St Brooklyn, NY 11231</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$1,350</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="position-absolute start-0 top-0 pt-3 ps-3"><span
+                      class="d-table badge bg-danger">Featured</span></div>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/16.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/16.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Family
+                      Home | 120 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">67-04 Myrtle Ave Glendale, NY 11385</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>From $4,500</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">4<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">2<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- Item-->
+            <div class="col-sm-6 col-xl-4">
+              <div class="card shadow-sm card-hover border-0 h-100">
+                <div class="tns-carousel-wrapper card-img-top card-img-hover"><a class="img-overlay"
+                    href="real-esingle.html"></a>
+                  <div class="content-overlay end-0 top-0 pt-3 pe-3">
+                    <button class="btn btn-icon btn-light btn-xs text-primary rounded-circle" type="button"
+                      data-bs-toggle="tooltip" data-bs-placement="left" title="Add to Wishlist"><i
+                        class="fi-heart"></i></button>
+                  </div>
+                  <div class="tns-carousel-inner"><img src="img/real-estate/catalog/17.jpg" alt="Image"><img
+                      src="img/real-estate/catalog/17.jpg" alt="Image"></div>
+                </div>
+                <div class="card-body position-relative pb-3">
+                  <h4 class="mb-1 fs-xs fw-normal text-uppercase text-primary">For rent</h4>
+                  <h3 class="h6 mb-2 fs-base"><a class="nav-link stretched-link" href="real-esingle.html">Tiffany
+                      Studio | 35 sq.m</a></h3>
+                  <p class="mb-2 fs-sm text-muted">3979 Albany Post Road Hyde Park, NY 12538</p>
+                  <div class="fw-bold"><i class="fi-cash mt-n1 me-2 lead align-middle opacity-70"></i>$700</div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-center mx-3 pt-3 text-nowrap"><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bed ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i
+                      class="fi-bath ms-1 mt-n1 fs-lg text-muted"></i></span><span
+                    class="d-inline-block mx-1 px-2 fs-sm">1<i class="fi-car ms-1 mt-n1 fs-lg text-muted"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </main>
+  <!-- Footer-->
+  <footer class="footer bg-secondary pt-5">
+    <div class="container pt-lg-4 pb-4">
+      <!-- Links-->
+      <div class="row mb-5 pb-md-3 pb-lg-4 d-flex justify-content-center">
+        <div class="col-lg-4 mb-lg-0 mb-4">
+          <h3>PIN Apartments</h3>
+
+          <p>A place where you home. If you're thinking of visiting a busy city, focus your search on hotels
+            that are centrally located, so you can move
+            around freely and easily - many sights and attractions will be close to your hotel, or just a
+            short taxi ride away.</p>
+
+
+        </div>
+
+        <div class="col-lg-4 mb-lg-0 mb-4">
+          <div class="d-flex flex-sm-row flex-column justify-content-between mx-n2">
+            <div class="mb-sm-0 mb-4 px-2">
+
+
+              <a class="d-inline-block mb-4" href="real-estate-home.html" style="text-decoration:none">
+                <h3>Contact up</h3>
+
+              </a>
+              <ul class="nav flex-column mb-sm-4 mb-2">
+                <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal" href="mailto:example@email.com"><i
+                      class="fi-mail mt-n1 me-2 align-middle opacity-70"></i>example@email.com</a>
+                </li>
+                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="tel:4065550120"><i
+                      class="fi-device-mobile mt-n1 me-2 align-middle opacity-70"></i>(123)
+                    125-0120</a></li>
+              </ul>
+              <div class="pt-2"><a class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                  href="#"><i class="fi-facebook"></i></a><a
+                  class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i
+                    class="fi-twitter"></i></a><a
+                  class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i
+                    class="fi-viber"></i></a><a
+                  class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2" href="#"><i
+                    class="fi-telegram"></i></a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+  <!-- Filters sidebar toggle button (mobile)-->
+  <button class="btn btn-primary btn-sm w-100 rounded-0 fixed-bottom d-lg-none" type="button" data-bs-toggle="offcanvas"
+    data-bs-target="#filters-sidebar"><i class="fi-filter me-2"></i>Filters</button>
+  <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
+      class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fi-chevron-up">
+    </i></a>
+  <!-- Vendor scrits: js libraries and plugins-->
+  <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+  <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script src="vendor/leaflet/dist/leaflet.js"></script>
+  <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+  <script src="vendor/nouislider/dist/nouislider.min.js"></script>
+  <!-- Main theme script-->
+  <script src="js/theme.min.js"></script>
+</body>
+
+</html>

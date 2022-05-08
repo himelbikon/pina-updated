@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Finder | Real Estate | Home</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Finder - Directory &amp; Listings Bootstrap Template">
+    <meta name="keywords"
+        content="bootstrap, business, directory, listings, e-commerce, car dealer, city guide, real estate, job board, user account, multipurpose, ui kit, html5, css3, javascript, gallery, slider, touch">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #666276;
+            ;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #bbb7c5;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function () {
+            window.onload = function () {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css" />
+    <link rel="stylesheet" media="screen" href="vendor/tiny-slider/dist/tiny-slider.css" />
+    <link rel="stylesheet" media="screen" href="vendor/flatpickr/dist/flatpickr.min.css" />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+</head>
+<!-- Body-->
+
+<body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+    <!----Nav Bar----->
+    <!-- Light navbar: Dark links against light background -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a href="index.html" class="navbar-brand me-2 me-xl-4">
+                <img class="d-block" src="img/logo/pina.png" width="50" alt="Finder">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <a href="#" class="btn btn-primary btn-sm ms-2 order-lg-3">
+                <i class="fi-phone me-2"></i>+355 69 202 1433<span class='d-none d-sm-inline'></span>
+            </a>
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Apartments</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="lucas.html" class="dropdown-item">Lucas</a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li>
+                                <a href="mimosa.html" class="dropdown-item">Mimosa</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!------End Nav Bar----->
+
+    <main>
+
+        <!-- Background image parallax -->
+        <div class="jarallax bg-dark py-5 mb-5" data-jarallax data-speed="0.5">
+            <span class="img-overlay"></span>
+            <div class="jarallax-img" style="background-image: url(path-to-background-image);"></div>
+            <div class="container content-overlay text-center my-md-4 py-sm-5">
+                <h2 class="h1 text-light py-lg-5 my-5">Pin Apartments, Tirana</h2>
+            </div>
+        </div>
+
+        <section class="container">
+
+            <h1 class="h2 mb-2">Apartment with Balcony</h1>
+            <p class="mb-2 pb-1 fs-lg">Rruga Mihal Duri, 1001 Tirana, Albania</p>
+            <!-- Features + Sharing-->
+            <div class="d-flex justify-content-between align-items-center">
+                <ul class="d-flex mb-4 list-unstyled">
+                    <li class="me-3 pe-3 border-end"><b class="me-1">01</b><i
+                            class="fi-bed mt-n1 lead align-middle text-muted"></i>
+                    </li>
+                    <li class="me-3 pe-3 border-end"><b class="me-1">02</b><i
+                            class="fi-bath mt-n1 lead align-middle text-muted"></i>
+                    </li>
+                    <li class="me-3 pe-3 border-end"><b class="me-1">02</b><i
+                            class="fi-car mt-n1 lead align-middle text-muted"></i>
+                    </li>
+                    <!-- <li><b>67 </b>sq.m</li> -->
+                </ul>
+                <div class="text-nowrap">
+                    <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2"
+                        type="button" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="fi-heart"></i></button>
+                    <div class="dropdown d-inline-block" data-bs-toggle="tooltip" title="Share">
+                        <button class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle ms-2 mb-2"
+                            type="button" data-bs-toggle="dropdown"><i class="fi-share"></i></button>
+                        <div class="dropdown-menu dropdown-menu-end my-1">
+                            <button class="dropdown-item" type="button"><i
+                                    class="fi-facebook fs-base opacity-75 me-2"></i>Facebook</button>
+                            <button class="dropdown-item" type="button"><i
+                                    class="fi-twitter fs-base opacity-75 me-2"></i>Twitter</button>
+                            <button class="dropdown-item" type="button"><i
+                                    class="fi-instagram fs-base opacity-75 me-2"></i>Instagram</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gallery-->
+        <section class="container overflow-auto mb-4 pb-3" data-simplebar>
+            <div class="row g-2 g-md-3 gallery" data-thumbnails="true" style="min-width: 30rem;">
+                <div class="col-8"><a class="gallery-item rounded rounded-md-3" href="img/real-estate/single/c01.jpg"
+                        data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Bathroom&lt;/h6&gt;"><img
+                            src="img/real-estate/single/c02.jpg" alt="Gallery thumbnail"></a></div>
+                <div class="col-4"><a class="gallery-item rounded rounded-md-3 mb-2 mb-md-3"
+                        href="img/real-estate/single/02.jpg"
+                        data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Bedroom&lt;/h6&gt;"><img
+                            src="img/real-estate/single/c03.jpg" alt="Gallery thumbnail"></a><a
+                        class="gallery-item rounded rounded-md-3" href="img/real-estate/single/03.jpg"
+                        data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Living room&lt;/h6&gt;"><img
+                            src="img/real-estate/single/c04.jpg" alt="Gallery thumbnail"></a></div>
+                <div class="col-12">
+                    <div class="row g-2 g-md-3">
+                        <div class="col"><a class="gallery-item rounded-1 rounded-md-2"
+                                href="img/real-estate/single/c04.jpg"
+                                data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Bedroom&lt;/h6&gt;"><img
+                                    src="img/real-estate/single/th04.jpg" alt="Gallery thumbnail"></a></div>
+                        <div class="col"><a class="gallery-item rounded-1 rounded-md-2"
+                                href="img/real-estate/single/c05.jpg"
+                                data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Kitchen&lt;/h6&gt;"><img
+                                    src="img/real-estate/single/c05.jpg" alt="Gallery thumbnail"></a></div>
+                        <div class="col"><a class="gallery-item rounded-1 rounded-md-2"
+                                href="img/real-estate/single/c06.jpg"
+                                data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Living room&lt;/h6&gt;"><img
+                                    src="img/real-estate/single/c06.jpg" alt="Gallery thumbnail"></a></div>
+                        <div class="col"><a class="gallery-item rounded-1 rounded-md-2"
+                                href="img/real-estate/single/c07.jpg"
+                                data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Bathroom&lt;/h6&gt;"><img
+                                    src="img/real-estate/single/c07.jpg" alt="Gallery thumbnail"></a></div>
+                        <div class="col"><a class="gallery-item more-item rounded-1 rounded-md-2"
+                                href="img/real-estate/single/c03.jpg"
+                                data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Bathroom&lt;/h6&gt;"><img
+                                    src="img/real-estate/single/c04.jpg" alt="Gallery thumbnail"><span
+                                    class="gallery-item-caption fs-base">+5 <span
+                                        class='d-none d-md-inline'>photos</span></span></a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-2 pb-1">
+            <div class="row">
+                <div class="col-md-7 mb-md-0 mb-4"><span class="badge bg-success me-2 mb-3">Verified</span><span
+                        class="badge bg-info me-2 mb-3">New</span>
+                    <h2 class="h3 mb-4 pb-4 border-bottom">$2,000<span
+                            class="d-inline-block ms-1 fs-base fw-normal text-body">/month</span></h2>
+                    <!-- Overview-->
+                    <div class="mb-4 pb-md-3">
+                        <!-- <h3 class="h4">Overview</h3> -->
+                        <p class="mb-1">
+
+                            Located within 600 m of Skanderbeg Square and 5 km of Dajti Ekspres Cable Car in Tirana, PIN
+                            Apartments provides
+                            accommodation with seating area. Complimentary WiFi is featured throughout the property and
+                            private parking is available
+                            on site. <br><br>
+
+                            All units here are air-conditioned and feature a flat-screen TV, a living room with a sofa,
+                            a well-equipped kitchen with
+                            a dining area, and a private bathroom with bidet, slippers and a hairdryer. A microwave, a
+                            fridge and oven are also
+                            provided, as well as a kettle.<br><br>
+
+                            There is also a business centre and a babysitting service on site.<br><br>
+
+                            The apartment offers a terrace.<br><br>
+
+                            Popular points of interest near PIN Apartments include Former Residence of Enver Hoxha,
+                            National Museum of History
+                            Albania and House of Leaves. The nearest airport is Tirana International Mother Teresa, 13
+                            km from the accommodation,
+                            and the property offers a paid airport shuttle service.<br><br>
+
+
+
+
+                        </p>
+                        <div class="collapse" id="seeMoreOverview">
+                            <p class="mb-1">This is our guests' favourite part of Tirana, according to independent
+                                reviews.
+                                <br><br>
+                                Couples particularly like the location — they rated it 10 for a two-person trip.
+                                <br><br>
+                                PIN Apartments has been welcoming Booking.com guests since 13 Oct 2021.
+                                <br><br>
+                                Distance in property description is calculated using © OpenStreetMap
+                            </p>
+                        </div><a class="collapse-label collapsed" href="#seeMoreOverview" data-bs-toggle="collapse"
+                            data-bs-label-collapsed="Show more" data-bs-label-expanded="Show less" role="button"
+                            aria-expanded="false" aria-controls="seeMoreOverview"></a>
+                    </div>
+                    <!-- Property Details-->
+                    <!-- <div class="mb-4 pb-md-3">
+                        <h3 class="h4">Property Details</h3>
+                        <ul class="list-unstyled mb-0">
+                            <li><b>Type: </b>apartment</li>
+                            <li><b>Apartment area: </b>120 sq.m</li>
+                            <li><b>Built: </b>2015</li>
+                            <li><b>Bedrooms: </b>4</li>
+                            <li><b>Bathrooms: </b>2</li>
+                            <li><b>Parking places: </b>2</li>
+                            <li><b>Pets allowed: </b>cats only</li>
+                        </ul>
+                    </div> -->
+                    <!-- Amenities-->
+                    <div class="mb-4 pb-md-3">
+                        <h3 class="h4">Amenities</h3>
+                        <ul class="list-unstyled row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-1 mb-1 text-nowrap">
+                            <li class="col"><i class="fi-wifi mt-n1 me-2 fs-lg align-middle"></i>WiFi</li>
+                            <li class="col"><i
+                                    class="fa-solid fa-ban-smoking mt-n1 me-2 fs-lg align-middle"></i>Non-smoking
+                                rooms</li>
+                            <li class="col"><i
+                                    class="fa-solid fa-wheelchair mt-n1 me-2 fs-lg align-middle"></i>Facilities for
+                                disabled guests</li>
+                            <li class="col"><i class="fi-parking mt-n1 me-2 fs-lg align-middle"></i>Parking place</li>
+                            <li class="col"><i
+                                    class="fa-solid fa-plane-arrival mt-n1 me-2 fs-lg align-middle"></i>Airport shuttle
+                            </li>
+
+                        </ul>
+                        <!-- <div class="collapse" id="seeMoreAmenities">
+                                                <ul class="list-unstyled row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-1 mb-1 text-nowrap">
+                                                    <li class="col"><i class="fi-no-smoke mt-n1 me-2 fs-lg align-middle"></i>No smocking
+                                                    </li>
+                                                    <li class="col"><i class="fi-pet mt-n1 me-2 fs-lg align-middle"></i>Cats</li>
+                                                    <li class="col"><i class="fi-swimming-pool mt-n1 me-2 fs-lg align-middle"></i>Swimming
+                                                        pool</li>
+                                                    <li class="col"><i class="fi-double-bed mt-n1 me-2 fs-lg align-middle"></i>Double bed
+                                                    </li>
+                                                    <li class="col"><i class="fi-bed mt-n1 me-2 fs-lg align-middle"></i>Single bed</li>
+                                                </ul>
+                                            </div> -->
+
+                        <!-- <a class="collapse-label collapsed" href="#seeMoreAmenities" data-bs-toggle="collapse"
+                                                data-bs-label-collapsed="Show more" data-bs-label-expanded="Show less" role="button"
+                                                aria-expanded="false" aria-controls="seeMoreAmenities"></a> -->
+                    </div>
+                    <!-- Post meta-->
+                    <div class="mb-lg-5 mb-md-4 pb-lg-2 py-4 border-top">
+                        <ul class="d-flex mb-4 list-unstyled fs-sm">
+                            <li class="me-3 pe-3 border-end">Published: <b>Dec 9, 2020</b></li>
+                            <li class="me-3 pe-3 border-end">Ad number: <b>681013232</b></li>
+                            <li class="me-3 pe-3">Views: <b>48</b></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+            </div>
+        </section>
+
+
+        <!-- Form -->
+        <div class="container col-xl-10 col-xxl-8 px-4 pb-4">
+            <div class="row align-items-center g-lg-5 pb-3">
+                <!-- <div class="col-lg-7 text-center text-lg-start">
+                    <h2 class="display-8 fw-bold lh-1 mb-3 text-dark">Have a Question?</h2>
+                    <p class="col-lg-10 fs-5 text-dark">If you have a question, feel free to leave us a message, send us
+                        an
+                        email,
+                        or hit the call button if you're on your cell and we'll get back to you as soon as possible.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="mailto:info@mogulmatter.com"
+                            class="btn btn-orange btn-lg px-4 me-md-2 text-white">Info@mogulmatter.com</button>
+                            <a href="tel:+19495420192" class="btn btn-outline-secondary btn-lg px-4">Call Us</a>
+                    </div>
+                </div> -->
+                <div class="col-md-10 mx-auto col-lg-8">
+                    <form action="igbot-form.php" id="" method="post" class="p-4 p-md-5 border rounded-10 shadow">
+                        <div class="form-floating mb-3">
+                            <input type="Name" class="form-control" name="name" id="name" placeholder="name">
+                            <label for="floatingInput">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="Email" class="form-control" name="email" id="email" placeholder="email">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="Phone Number" class="form-control" name="phonenumber" id="phonenumber"
+                                placeholder="Phone Number">
+                            <label for="floatingInput">Phone Number</label>
+                        </div>
+                        <div class="g-recaptcha" id="key_recaptcha"
+                            data-sitekey="6Lfi9OgUAAAAAHCZKyvl2jKek6k5fPuDxkTAHw-6" required>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary text-light" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <!-- Footer-->
+    <footer class="footer bg-secondary pt-5">
+        <div class="container pt-lg-4 pb-4">
+            <!-- Links-->
+            <div class="row mb-5 pb-md-3 pb-lg-4 d-flex justify-content-center">
+                <div class="col-lg-4 mb-lg-0 mb-4">
+                    <h3>PIN Apartments</h3>
+
+                    <p>A place where you home. If you're thinking of visiting a busy city, focus your search on hotels
+                        that are centrally located, so you can move
+                        around freely and easily - many sights and attractions will be close to your hotel, or just a
+                        short taxi ride away.</p>
+
+
+                </div>
+
+                <div class="col-lg-4 mb-lg-0 mb-4">
+                    <div class="d-flex flex-sm-row flex-column justify-content-between mx-n2">
+                        <div class="mb-sm-0 mb-4 px-2">
+                            <a class="d-inline-block mb-4" href="real-estate-home.html" style="text-decoration:none">
+                                <h3>Contact up</h3>
+
+                            </a>
+                            <ul class="nav flex-column mb-sm-4 mb-2">
+                                <li class="nav-item mb-2"><a class="nav-link p-0 fw-normal"
+                                        href="mailto:example@email.com"><i
+                                            class="fi-mail mt-n1 me-2 align-middle opacity-70"></i>example@email.com</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link p-0 fw-normal" href="tel:4065550120"><i
+                                            class="fi-device-mobile mt-n1 me-2 align-middle opacity-70"></i>(123)
+                                        125-0120</a></li>
+                            </ul>
+                            <div class="pt-2"><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-facebook"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-twitter"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-viber"></i></a><a
+                                    class="btn btn-icon btn-light-primary btn-xs shadow-sm rounded-circle me-2 mb-2"
+                                    href="#"><i class="fi-telegram"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span
+            class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon fi-chevron-up">
+        </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-fullscreen.js/dist/lg-fullscreen.min.js"></script>
+    <script src="vendor/lg-zoom.js/dist/lg-zoom.min.js"></script>
+    <script src="vendor/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
+    <script src="vendor/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+</body>
+</body>
+
+</html>
